@@ -5,7 +5,9 @@ namespace SolarApp
     {
         static async Task Main(string[] args) 
         {
-            Console.WriteLine("Hello World! This is a test.");
+            // write a welcome to the Solar Demo App to the console
+            Console.WriteLine("Welcome to the Solar Demo App");
+            
 
             SolarAPIClient client = new SolarAPIClient();
             var details = await client.GetSiteDetailsAsync(3401989);
@@ -18,15 +20,9 @@ namespace SolarApp
             Console.WriteLine($"--> Lifetime Energy  : {overview.LifeTimeEnergy}");
             Console.WriteLine($"--> Current Power: {overview.CurrentPower}");
 
-            // Calculate the percentage of current power, where the maximum 100% would be 8000 
 
-            var percentage = (overview.CurrentPower / 8000) * 100;
-            Console.WriteLine($"--> Current Power Percentage: {percentage}");
-            
 
         }
-
-
 
 
       
