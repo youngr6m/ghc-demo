@@ -6,7 +6,7 @@ namespace SolarApp
 {
     public class SolarAPIClient 
     {
-        public const string api_key="PSRSGI7KC8C6AFFA39VHJRG1P0BDN0TD";
+        public const string api_key="{key}";
         public const string BaseURL = "https://monitoringapi.solaredge.com/";
 
         public DataStore DataStore { get; set; } = new DataStore();
